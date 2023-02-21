@@ -29,10 +29,6 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
-img,picture,video{
-    display: block;
-    /* width:100%; */
-}
 #root, #__next {
     isolation: isolate;
 }
@@ -77,6 +73,7 @@ body{
 }
 
 .order_image img{
+    display: block;
     width:100%;
     border-radius: 1.25rem 1.25rem 0 0;
 }
@@ -85,17 +82,17 @@ body{
     width:85%;
     margin:0 auto;
 }
-.order_title,
 .order_description,
-.order_plan,
-.order_sumbit{
+.order_plan{
     margin-top: 1.25rem;
 }
+
 .order_title,
 .order_cost{
     color:var(--dark-blue);
 }
 .order_title{
+    margin-top: 2.5rem;
     font-size: 1.5rem;
     font-weight: 900;
 }
@@ -108,7 +105,7 @@ body{
 */
 .order_plan{
     background-color: var(--paler-blue);
-    padding: 0.675rem;
+    padding: 1rem;
     border-radius: 0.675rem;
     display: flex;
     justify-content: space-around;
@@ -140,6 +137,9 @@ body{
     Button styles
 ========
 */
+.order_submit{
+    margin-top: 2rem;
+}
 .btn{
     color:var(--desaturated-blue);
     display: block;
@@ -147,7 +147,7 @@ body{
     padding: 1rem;
     border-radius: 0.675rem;
     text-decoration: none;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 #bright_blue{
     color:var(--paler-blue);
@@ -155,7 +155,11 @@ body{
     margin: 0;
 }
 .btn:hover{color:var(--dark-blue);}
-#bright_blue:hover{background-color: var(--dark-blue);}
+#bright_blue:hover{
+    background-color: var(--dark-blue);
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 7px 7px var(--pale-blue);
+}
 
 
 @media(max-width:850px){
